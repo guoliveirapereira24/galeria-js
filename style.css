@@ -20,12 +20,26 @@ h1{
 main{
     flex-grow: 1;
 }
+.pesquisa-container{
+
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 30px;
+}
+.pesquisa-container input{
+    width: 60%;
+    height: 50%;
+    font-size: 2.2rem;
+}
 .galeria-container{
     display: flex;
-    gap: 15px;
+    gap: 10px;
     flex-wrap: wrap;
-    padding: 10px;
-    
+    position: absolute;
 }
 .galeria-items{
     width: 320px;
@@ -58,4 +72,65 @@ footer{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.slide {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: -999;
+    opacity: 0;
+    transition: all .5s linear;
+}
+
+.slide:target{
+    z-index: 999;
+    opacity: 1;
+}
+
+.slide .imagem-container{
+    position: relative;
+    height: 90%;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slide .icones{
+    position: absolute ;
+    width: 40px;
+    height: 40px;
+    background-color: #0007;
+    color: #FFF;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.slide .fechar{
+    top: 0;
+    right: 0;
+    font-size: 1.5rem;
+}
+
+.slide .icones:hover{
+    background-color: #FF4949;
+}
+.slide .anterior{
+    left: 0;
+    font-size: 2rem;
+}
+.slide .proximo{
+    right: 0;
+    font-size: 2rem;
+}
+
+.slide img{
+    width: 100%;
+    height: 100%;
 }
